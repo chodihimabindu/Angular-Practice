@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="js/angular.min.js"></script>
+  <!-- <script src="js/angular.js"></script> -->
+  <script src="js/imageuploadangular.js"> </script>
+</head>
+<style>
+
+  img{width:200px; height:200px;}
+
+</style>
+<body>
+  <div ng-app="plunkr">
+ <div ng-controller="UploadController ">
+     <form>
+       <input type="file" ng-file-select="onFileSelect($files)" ng-model="imageSrc">
+       <!--  <input type="file" ng-file-select="onFileSelect($files)" multiple> -->
+     </form>
+
+     <img ng-src="{{imageSrc}}" />
+
+   </div>
+ </div>
+
+</body>
+
+</html>
